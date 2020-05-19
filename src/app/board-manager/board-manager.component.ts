@@ -3,16 +3,16 @@ import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-board-user',
-  templateUrl: './board-user.component.html',
-  styleUrls: ['./board-user.component.css']
+  templateUrl: './board-manager.component.html',
+  styleUrls: ['./board-manager.component.css']
 })
-export class BoardUserComponent implements OnInit {
+export class BoardManagerComponent implements OnInit {
   content = '';
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUserBoard().subscribe(
+    this.userService.getManagerBoard().subscribe(
       data => {
         this.content = data;
       },

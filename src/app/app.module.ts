@@ -10,11 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardUserComponent } from './board-user/board-user.component';
-import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardStudentComponent } from './board-student/board-student.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { BoardManagerComponent } from './board-manager/board-manager.component';
+import { BoardRootComponent } from './board-root/board-root.component';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     RegisterComponent,
     HomeComponent,
     BoardAdminComponent,
-    BoardUserComponent,
-    BoardModeratorComponent,
-    ProfileComponent
+    BoardStudentComponent,
+    ProfileComponent,
+    BoardManagerComponent,
+    BoardRootComponent
   ],
   imports: [
     BrowserModule,
