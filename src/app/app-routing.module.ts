@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'student', component: BoardStudentComponent },
   { path: 'manager', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: 'root', component: BoardTeacherComponent },
-  { path: 'teacher', component: BoardRootComponent },
+  { path: 'root', component: BoardRootComponent },
+  { path: 'teacher', component: BoardTeacherComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
