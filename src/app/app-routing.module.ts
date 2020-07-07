@@ -1,3 +1,4 @@
+import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'student', component: BoardStudentComponent },
   { path: 'manager', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: 'root', component: BoardRootComponent },
+  { path: 'root', component: BoardTeacherComponent },
+  { path: 'teacher', component: BoardRootComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -18,6 +18,10 @@ export class UserService {
   getStudentBoard(): Observable<any> {
     return this.http.get(API_URL + 'student', { responseType: 'text' });
   }
+  getTeacherBoard(): Observable<any> {
+    return this.http.get(API_URL + 'teacher', { responseType: 'text' });
+  }
+
 
   getManagerBoard(): Observable<any> {
     return this.http.get(API_URL + 'manager', { responseType: 'text' });

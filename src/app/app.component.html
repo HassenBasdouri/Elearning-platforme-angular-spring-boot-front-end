@@ -17,6 +17,9 @@
       <li class="nav-item" *ngIf="showStudentBoard">
         <a href="/student" class="nav-link" *ngIf="isLoggedIn" routerLink="student">Student</a>
       </li>
+      <li class="nav-item" *ngIf="showEnseignantBoard">
+        <a href="/teacher" class="nav-link" *ngIf="isLoggedIn" routerLink="teacher">Teacher</a>
+      </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">

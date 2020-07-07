@@ -1,3 +1,7 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { BoardManagerComponent } from './board-manager/board-manager.component';
 import { BoardRootComponent } from './board-root/board-root.component';
+import { ManageGroupeComponent } from './manage-groupe/manage-groupe.component';
+import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
 
 
 @NgModule({
@@ -28,13 +34,19 @@ import { BoardRootComponent } from './board-root/board-root.component';
     BoardStudentComponent,
     ProfileComponent,
     BoardManagerComponent,
-    BoardRootComponent
+    BoardRootComponent,
+    ManageGroupeComponent,
+    BoardTeacherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
+    MatGridListModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

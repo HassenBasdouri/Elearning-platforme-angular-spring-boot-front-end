@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   showManagerBoard = false;
   showStudentBoard = false;
   showRootBoard = false;
+  showEnseignantBoard = false;
   username: string;
 
   constructor(private tokenStorageService: TokenStorageService) { }
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
       this.showManagerBoard = this.roles.includes('ROLE_MANAGER');
       this.showStudentBoard = this.roles.includes('ROLE_ETUDIANT');
       this.showRootBoard = this.roles.includes('ROLE_ROOT');
+      this.showEnseignantBoard = this.roles.includes('ROLE_ENSEIGNANT');
 
       this.username = user.username;
     }
