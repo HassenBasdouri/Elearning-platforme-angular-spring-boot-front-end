@@ -1,28 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { constants } from 'buffer';
-
-
-
-
-
-
+const host = 'http://localhost:8080/api/test/';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable({
   providedIn: 'root'
 })
-export class GroupeService {
+export class MatiereService {
 
   public  host:any = "http://localhost:8080/api/test/";
   constructor(private http: HttpClient) {
 
    }
-  getListOfGroupe() {
-    return this.http.get(this.host + 'allGroupe', httpOptions);
+  getListOfMatiere() {
+    return this.http.get(this.host + 'allMatiere', httpOptions);
   }
-  saveGroupes(url,data){
+  saveMatieres(url,data){
     return this.http.post(url,data)
   }
 }

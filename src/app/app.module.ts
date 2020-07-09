@@ -22,6 +22,13 @@ import { BoardManagerComponent } from './board-manager/board-manager.component';
 import { BoardRootComponent } from './board-root/board-root.component';
 import { ManageGroupeComponent } from './manage-groupe/manage-groupe.component';
 import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
+import { NewGroupeComponent } from './new-groupe/new-groupe.component';
+import { SeanceComponent } from './seance/seance.component';
+import { NewSeanceComponent } from './new-seance/new-seance.component';
+import { NSalleComponent } from './nsalle/nsalle.component';
+import { SalleComponent } from './salle/salle.component';
+import { NMatiereComponent } from './nmatiere/nmatiere.component';
+import { MatiereComponent } from './matiere/matiere.component';
 
 
 @NgModule({
@@ -36,7 +43,14 @@ import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
     BoardManagerComponent,
     BoardRootComponent,
     ManageGroupeComponent,
-    BoardTeacherComponent
+    BoardTeacherComponent,
+    NewGroupeComponent,
+    SeanceComponent,
+    NewSeanceComponent,
+    NSalleComponent,
+    SalleComponent,
+    NMatiereComponent,
+    MatiereComponent
   ],
   imports: [
     BrowserModule,

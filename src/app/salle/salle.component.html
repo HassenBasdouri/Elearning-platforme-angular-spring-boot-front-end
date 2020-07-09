@@ -1,0 +1,35 @@
+
+<body>
+
+
+    <div class="container">
+    
+     
+        <div>
+          <br> 
+          <h1 style="color: blue; text-align: center;">
+            Liste des Salles Disponible :</h1>
+          <hr>
+        </div>
+      
+  
+        <table class=" table table-striped"> 
+          <tr>
+            <th  style="color: red;"> ID : </th>
+            <th  style="color: red;"> Reference : </th>
+            <th  style="color: red;"> Nombre de place  : </th>
+            <th  style="color: red;"> Data Show : </th>
+          </tr>
+          <tr *ngFor="let salle of salles" >
+              <td>{{salle.id_Ma }} </td>
+              <td>{{salle.reference}}</td>
+              <td>{{salle.nb_places}}</td>
+              <td>{{salle.dataShow}}</td>
+
+          </tr>
+          
+          </table>
+        <a routerLink="/NMatier"> Ajouter Une Matiere  </a>
+      
+    </div>
+    </body>

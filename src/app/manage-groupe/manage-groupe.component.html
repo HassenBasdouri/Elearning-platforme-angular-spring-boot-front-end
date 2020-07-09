@@ -1,21 +1,27 @@
-<div class="container"
-     fxLayout="column"
-     fxLayoutGap="10px">
 
-  <div fxFlex>
+<body>
+
+
+<div class="container">
+
+ 
     <div>
-      <h3>Groupes</h3>
+      <br>
+      <h1 style="text-align: center; color: blue;"> Liste des Groupes : </h1>
       <hr>
     </div>
-  </div>
-
-  <div fxFlex>
-    <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let groupe of groupes" >
-        <mat-grid-tile-footer>
-          <h1>{{groupe.nom | uppercase}}</h1>
-        </mat-grid-tile-footer>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+  
+    <table class=" table table-striped"> 
+      <tr>
+        <th style="color: red;"> ID </th>
+        <th style="color: red;"> Nom </th>
+      </tr>
+      <tr *ngFor="let groupe of groupes" >
+        <td>{{groupe.id_Groupe }}</td>
+          <td>{{groupe.nom | uppercase}}</td>
+      </tr>
+        </table>
+    <a routerLink="/addgroupe" > Ajouter Un groupe </a>
+  
 </div>
+</body>

@@ -1,3 +1,10 @@
+import { NMatiereComponent } from './nmatiere/nmatiere.component';
+import { NSalleComponent } from './nsalle/nsalle.component';
+import { MatiereComponent } from './matiere/matiere.component';
+import { SalleComponent } from './salle/salle.component';
+import { SeanceComponent } from './seance/seance.component';
+import { NewGroupeComponent } from './new-groupe/new-groupe.component';
+import { ManageGroupeComponent } from './manage-groupe/manage-groupe.component';
 import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,6 +27,13 @@ const routes: Routes = [
   { path: 'manager', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: 'root', component: BoardRootComponent },
+  { path: 'manageGroupe', component: ManageGroupeComponent},
+  { path: 'manageSeance', component: SeanceComponent},
+  { path: 'manageSalle', component: SalleComponent},
+  { path: 'NSalle', component:NSalleComponent },
+  { path: 'NMatier', component:NMatiereComponent },
+  { path: 'manageMatier', component: MatiereComponent},
+  { path: 'addgroupe', component: NewGroupeComponent},
   { path: 'teacher', component: BoardTeacherComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

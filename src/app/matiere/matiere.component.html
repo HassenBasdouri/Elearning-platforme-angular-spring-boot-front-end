@@ -1,0 +1,35 @@
+
+<body>
+
+
+    <div class="container">
+    
+     
+        <div>
+          <br> 
+          <h1 style="color: blue; text-align: center;">
+            Liste des Matiers  Disponible :</h1>
+          <hr>
+        </div>
+      
+  
+        <table class=" table table-striped"> 
+          <tr>
+            <th  style="color: red;"> ID : </th>
+            <th  style="color: red;"> Libelle : </th>
+            <th  style="color: red;"> Coefficient : </th>
+            
+          </tr>
+          <tr *ngFor="let matiere of matiers" >
+              <td>{{matiere.id_Ma }} </td>
+              <td>{{matiere.libelle}}</td>
+              <td>{{matiere.coefficient}}</td>
+             
+
+          </tr>
+          
+          </table>
+        <a routerLink="/NMatier"> Ajouter Une Matiere  </a>
+      
+    </div>
+    </body>

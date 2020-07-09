@@ -1,0 +1,41 @@
+
+<div class="container "> 
+
+    <div class="panel panel-default"> <br>
+        <div class="panel heading"> Nouvelle  Salle <br> </div>
+            <div class="panel-body">
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form #f="ngForm" (ngSubmit)="onSaveSalle(f.value)">
+                            <div class="form-group">
+                                <br>
+                             <label class="control-label">
+                                Reference  :
+                             </label>
+                             <input type="text" class="form-control" name="reference" ngModel>
+                             </div>
+                             <div class="form-group">
+                                <br>
+                             <label class="control-label">
+                                Nombre de place  :
+                             </label>
+                             <input type="text" class="form-control" name="nb_places" ngModel>
+                             </div>
+                             <div class="form-group">
+                                <br>
+                             <label class="control-label">
+                                Data Show :
+                             </label>
+                             <input type="text" class="form-control" name="dataShow" ngModel>
+                             </div>
+                        <button class="btn btn-success" type="Submit"> Save</button>
+                        </form>
+        
+        
+        
+        
+        </div>
+        
+
+        </div>
+    </div>
+</div>
