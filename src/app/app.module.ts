@@ -30,6 +30,14 @@ import { FlatpickrModule } from 'angularx-flatpickr';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewGroupeComponent } from './new-groupe/new-groupe.component';
+import { SeanceComponent } from './seance/seance.component';
+import { NewSeanceComponent } from './new-seance/new-seance.component';
+import { NSalleComponent } from './nsalle/nsalle.component';
+import { SalleComponent } from './salle/salle.component';
+import { NMatiereComponent } from './nmatiere/nmatiere.component';
+import { MatiereComponent } from './matiere/matiere.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +52,14 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     BoardRootComponent,
     ManageGroupeComponent,
     BoardTeacherComponent,
-    EmploiGroupeComponent
+    EmploiGroupeComponent,
+    NewGroupeComponent,
+    SeanceComponent,
+    NewSeanceComponent,
+    NSalleComponent,
+    SalleComponent,
+    NMatiereComponent,
+    MatiereComponent
   ],
   imports: [
     BrowserModule,
