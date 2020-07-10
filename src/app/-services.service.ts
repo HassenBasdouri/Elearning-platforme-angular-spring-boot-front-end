@@ -1,26 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-const host = 'http://localhost:8080/api/test/';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable({
   providedIn: 'root'
 })
-export class MatiereService {
+export class ServicesService {
 
+ 
   public  host:any = "http://localhost:8080/api/test/";
   constructor(private http: HttpClient) {
 
    }
-  getListOfMatiere() {
-    return this.http.get(this.host + 'allMatiere', httpOptions);
+  getListOfEns() {
+    return this.http.get(this.host + 'allEnseignant', httpOptions);
   }
-  saveMatieres(url,data){
-    return this.http.post(url,data)
-  }
-  DeleteMatieres(url){
-    return this.http.delete(url)
-  }
-
 }

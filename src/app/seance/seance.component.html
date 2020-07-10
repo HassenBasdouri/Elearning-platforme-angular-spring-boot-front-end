@@ -1,1 +1,44 @@
-<p>seance works!</p>
+
+<body>
+
+
+    <div class="container">
+    
+     
+        <div>
+          <br>
+          <h1 style="text-align: center; color: blue;"> Liste des Seances : </h1>
+          <hr>
+        </div>
+      
+        <table class=" table table-striped"> 
+          <tr>
+            <th style="color: red;"> ID </th>
+            <th style="color: red;"> Matiere   </th>
+             <th style="color: red;"> Type   </th>
+             <th style="color: red;"> jour  </th>
+             <th style="color: red;"> Reference   </th>
+            <th style="color: red;"> Heure debut  </th>
+            <th style="color: red;"> Heure Fin </th>
+            
+             
+          </tr>
+          <tr *ngFor="let seance of seances" >
+             <td>{{seance.id_Sea }}</td>
+           
+              <td>{{seance.matiere.libelle }}</td>
+              <td>{{seance.type }}</td>
+              <td>{{seance.jour }}</td>
+              <td>{{seance.salle.reference }}</td>
+              
+              <td>{{seance.heureDebut }}</td>
+              <td>{{seance.heureFin }}</td>
+             
+              
+              <td> <a class="btn btn-danger" (click)="onDeleteSeance(seance)"> Delete</a></td>
+          </tr>
+            </table>
+        <a routerLink="/NSeance" > Ajouter Une Seance  </a>
+      
+    </div>
+    </body>

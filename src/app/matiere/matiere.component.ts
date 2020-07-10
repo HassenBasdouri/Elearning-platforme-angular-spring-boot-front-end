@@ -23,7 +23,7 @@ export class MatiereComponent implements OnInit {
   onDeleteMatier(matiere ){
   let conf=confirm("Etes Vous Sure ?")
   if(conf){
-    this.ms.DeleteMatieres(matiere).subscribe(data=>{
+    this.ms.DeleteMatieres(matiere ).subscribe(data=>{
       this.ngOnInit();
     },err=>{
       console.log(err) ;

@@ -21,7 +21,18 @@ export class SalleComponent implements OnInit {
       }
     );
 
+
   }
 
-
+onDeleteSalle(salle ){
+    let conf=confirm("Etes Vous Sure ?")
+    if(conf){
+      this.salleservice.DeleteSalle(salle ).subscribe(data=>{
+        this.ngOnInit();
+      },err=>{
+        console.log(err) ;
+      
+      })
+     }
+    }
 }

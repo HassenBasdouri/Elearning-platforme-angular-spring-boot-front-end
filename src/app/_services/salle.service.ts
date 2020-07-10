@@ -17,5 +17,7 @@ export class SalleService {
   saveSalles(url,data){
     return this.http.post(url,data)
   }
-
+  DeleteSalle(url){
+    return this.http.delete(url)
+  }
 }

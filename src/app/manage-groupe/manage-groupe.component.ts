@@ -21,5 +21,15 @@ export class ManageGroupeComponent implements OnInit {
       }
     );
   }
-
+  onDeleteGroupe(groupe ){
+    let conf=confirm("Etes Vous Sure ?")
+    if(conf){
+      this.groupeService.DeleteGroupe(groupe ).subscribe(data=>{
+        this.ngOnInit();
+      },err=>{
+        console.log(err) ;
+      
+      })
+     }
+    }
 }

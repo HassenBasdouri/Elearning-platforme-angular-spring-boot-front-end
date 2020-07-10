@@ -19,6 +19,7 @@
       <tr *ngFor="let groupe of groupes" >
         <td>{{groupe.id_Groupe }}</td>
           <td>{{groupe.nom | uppercase}}</td>
+          <td> <a class="btn btn-danger" (click)="onDeleteGroupe(groupe)"> Delete</a></td>
       </tr>
         </table>
     <a routerLink="/addgroupe" > Ajouter Un groupe </a>

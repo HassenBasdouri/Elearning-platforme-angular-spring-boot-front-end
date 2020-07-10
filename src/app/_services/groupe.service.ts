@@ -25,4 +25,7 @@ export class GroupeService {
   saveGroupes(url,data){
     return this.http.post(url,data)
   }
+  DeleteGroupe(url){
+    return this.http.delete(url)
+  }
 }

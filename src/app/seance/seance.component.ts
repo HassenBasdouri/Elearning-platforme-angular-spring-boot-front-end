@@ -1,3 +1,4 @@
+import { SeanceService } from './../_services/seance.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seance.component.css']
 })
 export class SeanceComponent implements OnInit {
-
-  constructor() { }
+  seances : any;
+  constructor(private s: SeanceService) { }
 
   ngOnInit(): void {
+    this.s.getListOfSeance().subscribe(
+      data => {
+        this.seances = data;
+      },
+      err => {
+        this.seances = JSON.parse(err.error).message;
+      }
+    );
   }
+  onDeleteSeance(seance ){
+    let conf=confirm("Etes Vous Sure ?")
+    if(conf){
+      this.s.DeleteSeance(seance ).subscribe(data=>{
+        this.ngOnInit();
+      },err=>{
+        console.log(err) ;
+      
+      })
+     }
+    }
 
 }

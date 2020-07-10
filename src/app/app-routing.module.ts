@@ -1,3 +1,4 @@
+import { NewSeanceComponent } from './new-seance/new-seance.component';
 import { NMatiereComponent } from './nmatiere/nmatiere.component';
 import { NSalleComponent } from './nsalle/nsalle.component';
 import { MatiereComponent } from './matiere/matiere.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'manageSalle', component: SalleComponent},
   { path: 'NSalle', component:NSalleComponent },
   { path: 'NMatier', component:NMatiereComponent },
+  { path: 'NSeance', component:NewSeanceComponent },
   { path: 'manageMatier', component: MatiereComponent},
   { path: 'addgroupe', component: NewGroupeComponent},
   { path: 'teacher', component: BoardTeacherComponent },
