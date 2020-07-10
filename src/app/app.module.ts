@@ -4,6 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +23,13 @@ import { BoardManagerComponent } from './board-manager/board-manager.component';
 import { BoardRootComponent } from './board-root/board-root.component';
 import { ManageGroupeComponent } from './manage-groupe/manage-groupe.component';
 import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
-
+import { EmploiGroupeComponent } from './emploi-groupe/emploi-groupe.component';
+import { DxSchedulerModule } from 'devextreme-angular';
+import { CommonModule } from '@angular/common';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,8 @@ import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
     BoardManagerComponent,
     BoardRootComponent,
     ManageGroupeComponent,
-    BoardTeacherComponent
+    BoardTeacherComponent,
+    EmploiGroupeComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +54,20 @@ import { BoardTeacherComponent } from './board-teacher/board-teacher.component';
     FlexLayoutModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule,
+    CommonModule,
+    FormsModule,
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    DxSchedulerModule
   ],
   providers: [authInterceptorProviders],
+  exports: [EmploiGroupeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
