@@ -19,4 +19,7 @@ export class MatiereService {
   saveMatieres(url,data){
     return this.http.post(url,data)
   }
+  DeleteMatieres(url){
+    return this.http.delete(url)
+  }
 }
